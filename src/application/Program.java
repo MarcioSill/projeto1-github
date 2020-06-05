@@ -7,10 +7,25 @@ public class Program {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("Digite um numero:");
-		double val = sc.nextDouble();
+		int val = sc.nextInt();		
+	
+		String[] nome = new String[val];
 		
-		System.out.println("Val: " + val);
+		sc.nextLine(); // lembre-se de colocar para desalocar
 		
+		for(int i = 0; i < val; i++)
+		{
+			
+			System.out.print("Digite o nome:");
+			
+			nome[i] = sc.nextLine();			
+			
+		}
+		
+		System.out.println();
+		for(int i = 0; i < val; i++) {
+		System.out.println("Nome: " + nome[i]);
+		}
 		
 		
 		sc.close();
